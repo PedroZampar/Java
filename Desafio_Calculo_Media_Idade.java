@@ -2,10 +2,12 @@ package trim1;
 
 import java.util.Scanner;
 
-public class Desafio_Calculo_Idade {
+public class Desafio_Calculo_Media_Idade {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
+		System.out.println("Digite a idade e de um Enter para informar a próxima\nPara finalizar o programa, digite 0.\n");
 		
 		int i, qtde = 0;
 		float media = 0f;
