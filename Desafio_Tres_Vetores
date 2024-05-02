@@ -1,0 +1,47 @@
+package trim1;
+
+import java.util.Scanner;
+
+public class Desafio_Tres_Vetores {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int[] x = new int[10];
+        int[] y = new int[10];
+        int[] z = new int[20];
+        int i, j = 0;
+        String saida = "";
+
+        for (i = 0; i <= 9; i++) {
+            System.out.printf("Informe o %d° número da 1ª lista: \n", i + 1);
+            x[i] = sc.nextInt();
+        }
+
+        for (i = 0; i <= 9; i++) {
+            System.out.printf("Informe o %d° número da 2ª lista: \n", i + 1);
+            y[i] = sc.nextInt();
+        }
+
+        sc.close();
+
+        for (i = 0; i <= 9; i++) {
+            z[j] = x[i];
+            j++;
+            z[j] = y[i];
+            j++;
+        }
+
+        saida += "[";
+
+        for (i = 0; i <= 19; i++) {
+            if (i == 19) {
+                saida += z[i];
+            } else {
+                saida += z[i] + ", ";
+            }
+        }
+
+        saida += "]";
+
+        System.out.printf(saida);
+    }
+}
