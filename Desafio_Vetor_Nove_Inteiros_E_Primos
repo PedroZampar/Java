@@ -1,0 +1,29 @@
+package trim1;
+
+import java.util.Scanner;
+
+public class Desafio_Vetor_Nove_Inteiros_E_Primos {
+    public static void main(String[] args) {
+        int[] numeros = new int[9];
+        int i, j, cont;
+        Scanner sc = new Scanner(System.in);
+        
+        for (i = 0; i <= 8; i++) {
+            System.out.printf("Digite o %d° número: \n", i+1);
+            numeros[i] = sc.nextInt();
+        }
+        sc.close();
+        
+        for (i = 0; i <= 8; i++) {
+            cont = 0;
+            for (j = 1; j <= numeros[i]; j++) {
+                if (numeros[i] % j == 0) {
+                    cont++;
+                }
+            }
+            if (cont == 2) {
+                System.out.printf("O número %d da posição %d é primo\n", numeros[i], i);
+            }
+        }
+    }
+}
