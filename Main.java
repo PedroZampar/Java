@@ -97,8 +97,3 @@ public class Main {
 			sc.close();
 	}
 }
-			km_viagem = sc.nextFloat();
-		}
-	}
-
-}
