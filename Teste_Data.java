@@ -28,25 +28,25 @@ public class Teste_Data {
         try {
             Data1 dataInvalida1 = new Data1(29, 2, 2023); // Ano não bissexto
         } catch (IllegalArgumentException e) {
-            System.out.println(e.getMessage()); // Dia inválido para o mês fornecido
+            System.out.println("Erro: " + e.getMessage()); // Dia inválido para o mês fornecido
         }
 
         try {
             Data1 dataInvalida2 = new Data1(32, 1, 2023); // Dia inválido
         } catch (IllegalArgumentException e) {
-            System.out.println(e.getMessage()); // Dia inválido para o mês fornecido
+            System.out.println("Erro: " + e.getMessage()); // Dia inválido para o mês fornecido
         }
 
         try {
             Data1 dataInvalida3 = new Data1(15, 13, 2023); // Mês inválido
         } catch (IllegalArgumentException e) {
-            System.out.println(e.getMessage()); // Mês inválido
+            System.out.println("Erro: " + e.getMessage()); // Mês inválido
         }
 
         try {
             Data1 dataInvalida4 = new Data1(15, 6, -1); // Ano inválido
         } catch (IllegalArgumentException e) {
-            System.out.println(e.getMessage()); // Ano inválido
+            System.out.println("Erro: " + e.getMessage()); // Ano inválido
         }
     }
 }
