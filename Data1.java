@@ -17,7 +17,7 @@ public class Data1 {
         if (dia >= 1 && dia <= 31) {
             this.dia = dia;
         } else {
-            throw new IllegalArgumentException("Dia inválido");
+            throw new IllegalArgumentException("Dia inválido: " + dia);
         }
         this.mes = 1; // Assumindo janeiro como padrão
         this.ano = 1900; // Assumindo 1900 como padrão
@@ -28,20 +28,20 @@ public class Data1 {
         if (mes >= 1 && mes <= 12) {
             this.mes = mes;
         } else {
-            throw new IllegalArgumentException("Mês inválido");
+            throw new IllegalArgumentException("Mês inválido: " + mes);
         }
-        
+
         if (mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12) {
             if (dia < 1 || dia > 31) {
-                throw new IllegalArgumentException("Dia inválido");
+                throw new IllegalArgumentException("O dia " + dia + " é inválido!");
             }
         } else if (mes == 4 || mes == 6 || mes == 9 || mes == 11) {
             if (dia < 1 || dia > 30) {
-                throw new IllegalArgumentException("Dia inválido");
+                throw new IllegalArgumentException("O dia " + dia + " é inválido!");
             }
         } else if (mes == 2) {
             if (dia < 1 || dia > 28 || (dia == 29 && !isAnoBissexto(this.ano))) {
-                throw new IllegalArgumentException("Dia inválido");
+                throw new IllegalArgumentException("O dia " + dia + " é inválido!");
             }
         }
         this.dia = dia;
@@ -53,17 +53,17 @@ public class Data1 {
         if (ano > 0) {
             this.ano = ano;
         } else {
-            throw new IllegalArgumentException("Ano inválido");
+            throw new IllegalArgumentException("O ano " + ano + " é inválido!");
         }
         if (mes >= 1 && mes <= 12) {
             this.mes = mes;
         } else {
-            throw new IllegalArgumentException("Mês inválido");
+            throw new IllegalArgumentException("O mês " + mes + " é inválido!");
         }
         if (dia >= 1 && dia <= diasNoMes(mes, ano)) {
             this.dia = dia;
         } else {
-            throw new IllegalArgumentException("Dia inválido para o mês fornecido");
+            throw new IllegalArgumentException("O dia " + dia + " é inválido para o mês " + mes);
         }
     }
 
